@@ -12,7 +12,7 @@ const TabButton = ({ active, onClick, icon: Icon, label }) => (
   </button>
 );
 
-const UploadDemo = () => {
+export const UploadDemo = () => {
   const [files, setFiles] = useState([]);
   const [isDragging, setIsDragging] = useState(false);
 
@@ -66,7 +66,7 @@ const UploadDemo = () => {
   );
 };
 
-const ChatDemo = () => {
+export const ChatDemo = () => {
   const [messages, setMessages] = useState([
     { role: 'assistant', content: 'Hi! Ask me anything from your uploaded notes.' }
   ]);
@@ -79,7 +79,6 @@ const ChatDemo = () => {
     setMessages((m) => [...m, { role: 'user', content: q }]);
     setInput('');
     setThinking(true);
-    // Simulated AI response
     setTimeout(() => {
       setMessages((m) => [...m, { role: 'assistant', content: 'Here\'s a concise answer grounded in your materials with key points and a simple example.' }]);
       setThinking(false);
@@ -118,7 +117,7 @@ const ChatDemo = () => {
   );
 };
 
-const QuizDemo = () => {
+export const QuizDemo = () => {
   const questions = useMemo(() => [
     { q: 'What does RAG stand for?', options: ['Retrieve-And-Generate', 'Retrieval-Augmented Generation', 'Reasoning-Augmented Guidance', 'Random Answer Generator'], correct: 1 },
     { q: 'Which DB stores vectors?', options: ['MongoDB', 'Pinecone', 'Redis', 'MySQL'], correct: 1 },
