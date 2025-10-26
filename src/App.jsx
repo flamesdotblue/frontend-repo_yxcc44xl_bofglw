@@ -1,16 +1,12 @@
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import Features from './components/Features';
-import Footer from './components/Footer';
+import React from 'react';
+import Navbar from './components/Navbar.jsx';
+import Hero from './components/Hero.jsx';
+import Features from './components/Features.jsx';
+import Footer from './components/Footer.jsx';
 
 function App() {
   return (
-    <div className="min-h-screen w-full bg-[#0A0B10] text-white">
-      {/* Decorative background gradient */}
-      <div className="pointer-events-none fixed inset-0 -z-[1]">
-        <div className="absolute -top-24 left-1/2 h-[600px] w-[900px] -translate-x-1/2 rounded-full bg-[radial-gradient(ellipse_at_center,rgba(99,102,241,0.25),rgba(168,85,247,0.15),transparent_70%)] blur-2xl" />
-      </div>
-
+    <div className="min-h-screen bg-gradient-to-b from-[#0b1020] via-[#0b1020] to-[#0a0f1d] text-white">
       <Navbar />
       <main>
         <Hero />
